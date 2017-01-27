@@ -81,23 +81,23 @@
 										<form id="form_cad" >
 											<div class="form-group">
 												
-												<input  required placeholder="Informe seu nome.."type="text" name="nome" class="form-control">
+												<input   placeholder="Informe seu nome.."type="text" id="nome" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input required  placeholder="Informe seu e-mail.."type="email" name="email" class="form-control">
+												<input   placeholder="Informe seu e-mail.."type="email" id="email" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input required  placeholder="Escolha uma senha.."type="password" name="senha-origin" class="form-control">
+												<input   placeholder="Escolha uma senha.."type="password" id="senha-origin" class="form-control">
 											</div>
 											<div class="form-group">
 										
-												<input required  placeholder="Confirme sua senha."type="password" name="senha-teste" class="form-control">
-											</div>
-											<button class="btn btn-primary btn-block">
-												Realizar cadastro
-											</button>
+												<input   placeholder="Confirme sua senha."type="password" id="senha-teste" class="form-control">
+											</div> 
+											<input type="submit" id="send" class="btn btn-danger btn-block" value="Realizar cadastro">
+												
+											</input>
 										</form>
 									</div>
 								</div>
@@ -119,6 +119,7 @@
 
 
 <script  src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="js/main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 
 </body>

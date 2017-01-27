@@ -8,8 +8,11 @@ $senhaForCad = $_POST['senha-origin'];
 
 $insert =  mysqli_query($conn, "INSERT INTO usu_mytask (nome, email, senha) VALUES ('$nomeForCad', '$emailForCad', '$senhaForCad')") or die ("Erro ao tentar inserir usuário no banco de dados");
 
+if ($insert){
+	echo "Enviado com sucesso";
+}
 
 //gera numero aleatorio para poder logar com segurança
-include ("log.php");
+//include ("log.php");
 
 ?>
