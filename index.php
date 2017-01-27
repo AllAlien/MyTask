@@ -64,7 +64,7 @@
 									<button class="close" data-dismiss="modal" aria-label="close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-											<!--INICIO DA DIV DE LOAD-->
+									<!--INICIO DA DIV DE LOAD-->
 									<div class="loading">
 										<img id="loading" src="img/load-img.gif" alt="">
 										<h1 id="titulo_cad">Insira os dados para cadastro</h1>
@@ -77,6 +77,7 @@
 									</div>
 									<div class="modal-body">
 									<!--INICIO DO FORM DE CADASTRO-->
+									<!--Modificação em andamento-->
 										<form id="form_cad" action="cad-usu-mytask.php" method="post">
 											<div class="form-group">
 												

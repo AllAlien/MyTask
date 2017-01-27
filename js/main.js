@@ -10,7 +10,7 @@ var dados = $(this).serialize();
 $("#form_cad").submit(function(){
 
 $.ajax({
-	url: cad-usu-mytask.php,
+	url: 'cad-usu-mytask.php',
 	type: 'POST',
 	data: dados,
 	beforeSend: loading,
