@@ -78,7 +78,7 @@
 									<div class="modal-body">
 									<!--INICIO DO FORM DE CADASTRO-->
 									<!--Modificação em andamento-->
-										<form id="form_cad" action="cad-usu-mytask.php" method="post">
+										<form id="form_cad" >
 											<div class="form-group">
 												
 												<input  required placeholder="Informe seu nome.."type="text" name="nome" class="form-control">
