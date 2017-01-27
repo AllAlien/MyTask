@@ -11,7 +11,6 @@ $query = mysqli_query($conn, $selecao);
 $rows = mysqli_num_rows ($query);
 
 
-if ($rows > 0){
 
 ?>
 
@@ -22,14 +21,30 @@ if ($rows > 0){
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilo_index.css">
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <header>
 	<div class="container">
+	<div class="row">
+		<div class="col-6">
 		<h1 class="titulo">MY TASK</h1>
 		<h4 class="sub-titulo">Um passo de cada vez.</h4>
-	</div>
+			
+		</div>
+	
+		</div>
+		
+		<div class="img-trofeu">
+		<img src="img/trofeu.png" alt="Quantos premios você já ganhou">
+		
+		<span class="badge">
+			<?php
+				include ("pointer.php");
+			?>
+		</span>		
+		</div>
+		</div>
 </header>
 		<div class="container-fluid">
 			<!--INICIO DA NAVBAR-->
@@ -65,7 +80,7 @@ if ($rows > 0){
 											<div class="modal-body">
 
 											<!--INICIO DO FORM DE CADASTRO DE TAREFAS-->
-											<form action=<?php echo "cad-tarefa.php?email=".$emailOfuser; ?>
+											<form action=<?php echo "cad-tarefa.php?email=".$emailOfuser."&p=".$myChampions; ?>
 											 method="post">
 												<div class="form-group">
 													<label for="">
@@ -92,7 +107,7 @@ if ($rows > 0){
 													<label for="">
 														Determine um prazo para sua tarefa
 													</label>
-													<input type="number" class="form-control" name="dias-tarefa">
+													<input min='1' type="number" class="form-control" name="dias-tarefa">
 												</div>
 												<button class="btn btn-primary btn-block">
 													Concluir 
@@ -144,15 +159,21 @@ if ($rows > 0){
 					<h1 class="titulo-tabela">Suas tarefas</h1>
 				</div>
 				<!--INICIO DA TABELA PARA VIEW DE TAREFAS-->
-					<table class="table table-bordered table-hover">
+					<table class="table table-bordered table-hover my-table">
 						<tr>
 							<th>Nome</th>
 							<th>Grau de importancia</th>
 							<th>Dias restantes</th>
 							<th>Data de criação</th>
+							<th>ùltima alteração</th>
 							<th>Ações</th>
 						</tr>
-					<?php while ($dados=$query->fetch_array()){
+					<?php 
+
+
+						if ($rows > 0){
+
+					while ($dados=$query->fetch_array()){
 
 						?>
 						<tr>
@@ -160,12 +181,15 @@ if ($rows > 0){
 							<td><?php echo $dados['grauDaTarefa'];?></td>
 							<td><?php echo $dados['diasDaTarefa'];?></td>
 							<td><?php echo $dados['dataDaTarefa'];?></td>
-							<td></td>
+							<td><?php echo $dados['dataMod'];?></td>
+							<td><button class="btn btn-info btn-xs"><a class="glyphicon glyphicon-ok" href=<?php echo "done-task.php?email=".$emailOfuser."&id=".$dados['id'];?> title="Concluir esta tarefa"></a></button></td>
 						</tr>
 						<?php
 						//fechamento do while
 							}
 
+						}else{
+							echo "<span style='color:#f00'>Not task found*</span>";
 						} 
 
 						?>
@@ -186,5 +210,6 @@ if ($rows > 0){
 
 <script  src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
 </body>
 </html>

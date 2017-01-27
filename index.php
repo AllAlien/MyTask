@@ -13,13 +13,13 @@
 		<h4 class="sub-titulo">Um passo de cada vez.</h4>
 	</div>
 </header>
-		<div class="container-fluid">
+		<div class="container-fluid color-index">
 			<div class="row">
 				<div class="col-md-12">
 					
 						
 					<div class="form-index center-block">
-						<h1 class="titulo-form-index">Bem vindo ao MyTask</h1>
+						<h1 class="titulo-form-index">Bem vindo ao MYTASK</h1>
 						
 						<button  id="btn-login-index" data-toggle="modal" data-target="#modal-login" class="btn btn-success">
 							Entrar
@@ -43,6 +43,7 @@
 												<label for="" class="form-control">Insira sua senha</label>
 												<input type="password" name="senha" placeholder="Informe sua conta.." class="form-control">
 											</div>
+											<span><a href="">Esqueci minha senha</a></span>
 											<button class="btn btn-primary btn-block">Login</button>
 										</form>
 									</div>
@@ -110,7 +111,7 @@
 		</div>
 <footer>
 	<div class="container">
-		<a class='info-privacidade'href="#">Nossa política de privacidade.</a>
+		<a class='info-privacidade'href="">Nossa política de privacidade.</a>
 	</div>
 </footer>	
 

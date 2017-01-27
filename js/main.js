@@ -8,9 +8,10 @@ $("#titulo_cad").fadeOut('fast');
 
 var dados = $(this).serialize();
 $("#form_cad").submit(function(){
+return false;
 
 $.ajax({
-	url: cad-usu-mytask.php,
+	url: 'cad-usu-mytask.php',
 	type: 'POST',
 	data: dados,
 	beforeSend: loading,
@@ -23,7 +24,6 @@ $.ajax({
 
 
 
-return false;
 });
 
 

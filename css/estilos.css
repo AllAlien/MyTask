@@ -3,13 +3,15 @@ header{
 	background: #FF1493;
 
 }
+
 footer{
-	margin-top: 400px;
+	margin-top:0px;
 	height: 200px;
 	background: #FF1493;
 }
 .titulo, .sub-titulo{
 	color:#fff;
+	font-weight: bold;
 }
 .info-privacidade{
 	color:#fff;
@@ -21,4 +23,24 @@ footer{
 }
 #loading{
 	display:none;
+}
+.alert-not-found{
+	color:#f00;
+}
+table, th, .titulo-tabela	{
+	text-align: center;
+	color:#099;
+}
+
+div.img-trofeu{
+	width: 150px;
+	height: 100px;
+}
+
+.color-index{
+	background: #ADD8E6;
+	height: 600px;
+}
+.titulo-form-index{
+	font-weight: bold;
 }
