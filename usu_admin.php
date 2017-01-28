@@ -170,7 +170,7 @@ $rows = mysqli_num_rows ($query);
 					<?php 
 
 						if($rows > 0){ 
->>>>>>> testeMytask
+
 					while ($dados=$query->fetch_array()){
 
 						?>
@@ -200,7 +200,11 @@ $rows = mysqli_num_rows ($query);
 		</div>
 <footer>
 	<div class="container">
-		<a class='info-privacidade' href="#">Nossa política de privacidade.</a>
+		<a class='info-privacidade' data-toggle="modal" data-target="#modalprivit"href="">Nossa política.</a>
+		<?php
+			//inclusão da modal
+			include ("politica.php");
+		?>
 	</div>
 </footer>	
 

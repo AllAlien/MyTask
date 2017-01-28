@@ -116,7 +116,12 @@
 		</div>
 <footer>
 	<div class="container">
-		<a class='info-privacidade'href="">Nossa política de privacidade.</a>
+		<a class='info-privacidade' href="" data-toggle="modal" data-target="#modalprivit">Nossa política.</a>
+		<!--INICIO DA MODAL INFO PRIVCIDADE-->
+		<?php
+			include ("politica.php");
+		?>
+
 	</div>
 </footer>	
 
