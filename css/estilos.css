@@ -30,3 +30,20 @@ footer{
 	display: none;
 	color:#f00;
 }
+table, th, .titulo-tabela	{
+	text-align: center;
+	color:#099;
+}
+
+div.img-trofeu{
+	width: 150px;
+	height: 100px;
+}
+
+.color-index{
+	background: #ADD8E6;
+	height: 600px;
+}
+.titulo-form-index{
+	font-weight: bold;
+}
