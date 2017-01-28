@@ -34,9 +34,7 @@ function loading(){
 			$("#send").val("Aguardando...");
 			$("#mg-info-login").css('display', 'inline');
 			},4000);
-			setTimeout(function(){
-				window.location="log.php";
-			}, 6000);
+
 		
 		}).fail(function(){
 			$("#loading").css('display', 'none');

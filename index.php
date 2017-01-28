@@ -71,7 +71,7 @@
 										<h1 id="titulo_cad">Insira os dados para cadastro</h1>
 										<h4 id="cad_success">Cadastro realizado com sucesso!</h4>
 										<h5 id="cad_fail">Erro ao inserir os dados, tente novamente mais tarde.</h5>
-										<h6 id='mg-info-login'>Aguarde, estamos preparando o ambiente para você..</h6>
+										<h6 id='mg-info-login'>Clique no botão entrar para fazer login.</h6>
 									</div>
 
 									<!--FIM DA DIV DE LOAD-->

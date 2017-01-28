@@ -10,9 +10,6 @@ $query = mysqli_query($conn, $selecao);
 
 $rows = mysqli_num_rows ($query);
 
-
-if ($rows > 0){
-
 ?>
 
 
@@ -152,7 +149,9 @@ if ($rows > 0){
 							<th>Data de criação</th>
 							<th>Ações</th>
 						</tr>
-					<?php while ($dados=$query->fetch_array()){
+					<?php 
+						if($rows > 0){ 
+					while ($dados=$query->fetch_array()){
 
 						?>
 						<tr>
