@@ -24,9 +24,25 @@ $rows = mysqli_num_rows ($query);
 <body>
 <header>
 	<div class="container">
+	<div class="row">
+		<div class="col-6">
 		<h1 class="titulo">MY TASK</h1>
 		<h4 class="sub-titulo">Um passo de cada vez.</h4>
-	</div>
+			
+		</div>
+	
+		</div>
+		
+		<div class="img-trofeu">
+		<img src="img/trofeu.png" alt="Quantos premios você já ganhou">
+		
+		<span class="badge">
+			<?php
+				include ("pointer.php");
+			?>
+		</span>		
+		</div>
+		</div>
 </header>
 		<div class="container-fluid">
 			<!--INICIO DA NAVBAR-->
