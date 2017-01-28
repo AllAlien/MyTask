@@ -25,6 +25,7 @@
 							Entrar
 						</button>
 						<!--INICIO DE MODAL-->
+
 						<div class="fade modal" tabindex="-1" id="modal-login" role="dialog" aria-labelledby="mySmallModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
@@ -68,6 +69,9 @@
 									<div class="loading">
 										<img id="loading" src="img/load-img.gif" alt="">
 										<h1 id="titulo_cad">Insira os dados para cadastro</h1>
+										<h4 id="cad_success">Cadastro realizado com sucesso!</h4>
+										<h5 id="cad_fail">Erro ao inserir os dados, tente novamente mais tarde.</h5>
+										<h6 id='mg-info-login'>Aguarde, estamos preparando o ambiente para você..</h6>
 									</div>
 
 									<!--FIM DA DIV DE LOAD-->
@@ -78,24 +82,24 @@
 									<div class="modal-body">
 									<!--INICIO DO FORM DE CADASTRO-->
 									<!--Modificação em andamento-->
-										<form id="form_cad" >
+										<form id="form_cad" autocomplete="off">
 											<div class="form-group">
 												
-												<input   placeholder="Informe seu nome.."type="text" id="nome" class="form-control">
+												<input  required placeholder="Informe seu nome.."type="text" id="nome" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input   placeholder="Informe seu e-mail.."type="email" id="email" class="form-control">
+												<input  required placeholder="Informe seu e-mail.."type="email" id="email" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input   placeholder="Escolha uma senha.."type="password" id="senha-origin" class="form-control">
+												<input  required placeholder="Escolha uma senha.."type="password" id="senha" class="form-control">
 											</div>
 											<div class="form-group">
 										
-												<input   placeholder="Confirme sua senha."type="password" id="senha-teste" class="form-control">
+												<input  required placeholder="Confirme sua senha."type="password" id="senha-teste" class="form-control">
 											</div> 
-											<input type="submit" id="send" class="btn btn-danger btn-block" value="Realizar cadastro">
+											<input type="submit" id="send" class="btn btn-success btn-block" value="Realizar cadastro">
 												
 											</input>
 										</form>
