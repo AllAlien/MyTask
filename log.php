@@ -7,4 +7,7 @@ $_SESSION['numeral_log'] = $numeral;
 
 header("location:usu_admin.php?numLog=".$numeral);
 
+//teste 
+
 ?>
+

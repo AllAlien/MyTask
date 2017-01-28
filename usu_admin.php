@@ -11,7 +11,6 @@ $query = mysqli_query($conn, $selecao);
 $rows = mysqli_num_rows ($query);
 
 
-
 ?>
 
 
@@ -170,9 +169,8 @@ $rows = mysqli_num_rows ($query);
 						</tr>
 					<?php 
 
-
-						if ($rows > 0){
-
+						if($rows > 0){ 
+>>>>>>> testeMytask
 					while ($dados=$query->fetch_array()){
 
 						?>
@@ -202,7 +200,7 @@ $rows = mysqli_num_rows ($query);
 		</div>
 <footer>
 	<div class="container">
-		<a class='info-privacidade'href="#">Nossa política de privacidade.</a>
+		<a class='info-privacidade' href="#">Nossa política de privacidade.</a>
 	</div>
 </footer>	
 

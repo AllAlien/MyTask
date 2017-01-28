@@ -25,6 +25,7 @@
 							Entrar
 						</button>
 						<!--INICIO DE MODAL-->
+
 						<div class="fade modal" tabindex="-1" id="modal-login" role="dialog" aria-labelledby="mySmallModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
@@ -65,10 +66,13 @@
 									<button class="close" data-dismiss="modal" aria-label="close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-											<!--INICIO DA DIV DE LOAD-->
+									<!--INICIO DA DIV DE LOAD-->
 									<div class="loading">
 										<img id="loading" src="img/load-img.gif" alt="">
 										<h1 id="titulo_cad">Insira os dados para cadastro</h1>
+										<h4 id="cad_success">Cadastro realizado com sucesso!</h4>
+										<h5 id="cad_fail">Erro ao inserir os dados, tente novamente mais tarde.</h5>
+										<h6 id='mg-info-login'>Clique no botão entrar para fazer login.</h6>
 									</div>
 
 									<!--FIM DA DIV DE LOAD-->
@@ -78,26 +82,27 @@
 									</div>
 									<div class="modal-body">
 									<!--INICIO DO FORM DE CADASTRO-->
-										<form id="form_cad" action="cad-usu-mytask.php" method="post">
+									<!--Modificação em andamento-->
+										<form id="form_cad" autocomplete="off">
 											<div class="form-group">
 												
-												<input  required placeholder="Informe seu nome.."type="text" name="nome" class="form-control">
+												<input  required placeholder="Informe seu nome.."type="text" id="nome" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input required  placeholder="Informe seu e-mail.."type="email" name="email" class="form-control">
+												<input  required placeholder="Informe seu e-mail.."type="email" id="email" class="form-control">
 											</div>
 											<div class="form-group">
 											
-												<input required  placeholder="Escolha uma senha.."type="password" name="senha-origin" class="form-control">
+												<input  required placeholder="Escolha uma senha.."type="password" id="senha" class="form-control">
 											</div>
 											<div class="form-group">
 										
-												<input required  placeholder="Confirme sua senha."type="password" name="senha-teste" class="form-control">
-											</div>
-											<button class="btn btn-primary btn-block">
-												Realizar cadastro
-											</button>
+												<input  required placeholder="Confirme sua senha."type="password" id="senha-teste" class="form-control">
+											</div> 
+											<input type="submit" id="send" class="btn btn-success btn-block" value="Realizar cadastro">
+												
+											</input>
 										</form>
 									</div>
 								</div>
@@ -119,6 +124,7 @@
 
 
 <script  src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="js/main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 
 </body>

@@ -24,7 +24,13 @@ footer{
 #loading{
 	display:none;
 }
-.alert-not-found{
+
+#cad_success, #mg-info-login{
+	display: none;
+	color:#3CB371;
+}
+#cad_fail{
+	display: none;
 	color:#f00;
 }
 table, th, .titulo-tabela	{

@@ -1,26 +1,49 @@
 $(document).ready(function(){
 
-function loading(){ 
-$("#loading").fadeIn();
-$("#titulo_cad").fadeOut('fast');
+$("#form_cad").submit(function(e){
+	e.preventDefault();
+
+
+
+function loading(){
+	$("#loading").fadeIn();
+	$("#titulo_cad").css('display', 'none');
+	$("#send").val("Enviando dados...");
 
 }
+	var dada = {
+		nome: $("#nome").val(),
+		email: $("#email").val(),
+		senha: $("#senha").val(),
 
-var dados = $(this).serialize();
-$("#form_cad").submit(function(){
-return false;
-
-$.ajax({
-	url: 'cad-usu-mytask.php',
-	type: 'POST',
-	data: dados,
-	beforeSend: loading,
-	success: function(){
-		
 	}
+	$.ajax({
+		url: 'cad-usu-mytask.php',
+		dataType: 'json',
+		type: 'post',
+		data: dada,
+		beforeSend: loading,
+		}).done(function(){ 
+			setTimeout(function(){
+			$("#loading").css('display', 'none');
+			$("#cad_success").css('display', 'inline');
+			$("#send").val("Realizar cadastro");
 
+			}, 3000);
+			setTimeout(function(){
+			$("#loading").css('display', 'none');
+			$("#cad_success").css('display', 'none');
+			$("#send").val("Aguardando...");
+			$("#mg-info-login").css('display', 'inline');
+			},4000);
 
-})
+		
+		}).fail(function(){
+			$("#loading").css('display', 'none');
+			$("#cad_fail").css('display', 'inline');
+			$("#send").val("Realizar cadastro");
+
+		});
 
 
 
