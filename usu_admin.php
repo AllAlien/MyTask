@@ -19,7 +19,7 @@ $rows = mysqli_num_rows ($query);
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilo_index.css">
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <header>
@@ -165,6 +165,8 @@ $rows = mysqli_num_rows ($query);
 						//fechamento do while
 							}
 
+						}else{
+							echo "<span style='color:#f00'>Not task found*</span>";
 						} 
 
 						?>
@@ -177,7 +179,7 @@ $rows = mysqli_num_rows ($query);
 		</div>
 <footer>
 	<div class="container">
-		<a class='info-privacidade'href="#">Nossa política de privacidade.</a>
+		<a class='info-privacidade' href="#">Nossa política de privacidade.</a>
 	</div>
 </footer>	
 
